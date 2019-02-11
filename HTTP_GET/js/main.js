@@ -14,11 +14,33 @@ window.onload = () => {
   console.log("LOADED");
 }
 
-function getSuggestions(){
+function getAllSuggestions(){
   const inputFieldArray = inputField.value.split(/[^\(\[a-z\]\[A-Z\]\)]/); //Splits the string into an array of words
   console.log(inputFieldArray);
 
-  
+  const filteredInputArray = inputFieldArray.filter((value, index, array) => { return value.length > 0});
+  console.log(filteredInputArray);
+
+  filteredInputArray.forEach(getSuggestions)
+
+}
+
+function getSuggestions(word){
+  var endpoint = url + queryParamsRhy + word;
+  console.log(endpoint);
+
+  var xhr = new XMLHttpRequest();
+  xhr.responseType = 'json'
+
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      //Do some rendering...
+      renderRawResponse(xhr.response);
+    }
+  }
+
+  xhr.open('GET', endpoint);
+  xhr.send();
 
 
 }
@@ -38,7 +60,8 @@ const displaySuggestions = (event) => {
   findPun();
 };
 */
-submit.addEventListener('click', getSuggestions);
+
+submit.addEventListener('click', getAllSuggestions);
 
 
 
