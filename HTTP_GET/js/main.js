@@ -22,8 +22,8 @@ function getAllSuggestions(){
   console.log(filteredInputArray);
 
   filteredInputArray.forEach(getSuggestions)
-
 }
+
 
 function getSuggestions(word){
   var endpoint = url + queryParamsRhy + word;
@@ -35,7 +35,7 @@ function getSuggestions(word){
   xhr.onreadystatechange = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       //Do some rendering...
-      renderRawResponse(xhr.response);
+      renderResponse(xhr.response);
     }
   }
 
@@ -44,10 +44,6 @@ function getSuggestions(word){
 
 
 }
-
-
-
-
 
 /*
 // clear previous results and display results to webpage
@@ -62,32 +58,3 @@ const displaySuggestions = (event) => {
 */
 
 submit.addEventListener('click', getAllSuggestions);
-
-
-
-const renderRawResponse = (res) => {
-  // taking the first 10 words from res
-  let trimmedResponse = res; //res.slice(0, 10);
-  //manipulates responseField to render the unformatted response
-  //responseField
-  responseField.innerHTML = `<text>${JSON.stringify(trimmedResponse)}</text>`
-}
-
-/*
-function findPun(){
-  var wordQuery = inputField.value.split();
-  console.log(wordQuery)
-  var endpoint = url + queryParamsRhy + wordQuery + queryAnd + queryParamsSL + wordQuery;
-
-  const xhr = new XMLHttpRequest();
-  xhr.responseType = 'json';
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      renderRawResponse(xhr.response);
-    }
-  };
-
-  xhr.open("GET", endpoint);
-  xhr.send();
-}
-*/
