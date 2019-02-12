@@ -1,4 +1,57 @@
-h1 {color:blue;}
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  border-radius: 4px;
+  border: 2px solid black;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  -background-color: red;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr
+}
+
+.centerInner{
+  justify-self: center;
+  align-self: center;
+}
+
+
+#submit {
+  height: auto;
+  width: auto;
+}
+
+
+#responseField {
+  resize: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  padding: 1em;
+  height: 75%;
+  width: 75%;
+}
+
+#input {
+  resize: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  padding: 1em;
+  height: 75%;
+  width: 75%;
+}
+
+
 
 .dropdown-content {
   display: none;
@@ -8,6 +61,14 @@ h1 {color:blue;}
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+
+.word {
+  display: inline;
+}
+
+
+
+
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
