@@ -2,16 +2,41 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css" />
-<head>
+</head>
 <body>
-  <h1>PUN FINDER</h1>
+  <div class="app">
 
-  <div class = "container">
-    <textarea type="text" class="centerInner" id="input"></textarea>
-      <button class="centerInner" id="submit">SUBMIT</button>
-      <div class="centerInner" id="responseField"> </div>
+    <h1>Word Replacement</h1>
+
+    <div class = "interact-container">
+      <textarea type="text" class="centerInner" id="input" placeholder='Please insert text here ...'></textarea>
+        <button class="centerInner" id="submit">Search</button>
+        <div class="centerInner" id="responseField"> <div class="centerInner" id="suggestionField"> </div> </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <p class="contact-info" > <strong>Contact Info </br> Dennis Phetsomphou </br> https://github.com/Rovaxes </strong></p>
+        <p class="resources"><strong>Resources Used </br>
+          <a href="https://www.datamuse.com/api/">Datamuse API</a> </br>
+          <a href="https://www.pexels.com/@designedbyjess">Background Image</a> </strong></br>
+        </p>
+      </div>
+    </footer>
+
+
+  </div>
+
+  <div class = "description-container">
+    <!--<p>
+      The site takes the input of the user and makes an HTTP Get request to
+      Datamuse's API. I divide the input into an String Array seperated by
+      non-characters using regex. Using the array I iterate through the each word
+      and make the respective query to the API and display the result in the
+      Response Field. I aim to use promises to preserve the order as some words
+      return faster then others.
+    </p> <!-- How it works -->
   </div>
 
   <script src="js/main.js"> </script>
   <script src="js/helperFunctions.js"> </script>
-<body>
+</body>
