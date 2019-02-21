@@ -2,6 +2,8 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
   <div class="app">
@@ -13,6 +15,11 @@
         <button class="centerInner" id="submit">Search</button>
         <div class="centerInner" id="responseField"> <div class="centerInner" id="suggestionField"> </div> </div>
     </div>
+
+      <p class = "description-container">
+        Note: This ignores any non-characters (ex. {1,2,. ',', '?', ...})
+      </p> <!-- How it works -->
+
     <footer>
       <div class="footer-container">
         <p class="contact-info" > <strong>Contact Info </br> Dennis Phetsomphou </br> https://github.com/Rovaxes </strong></p>
@@ -24,17 +31,6 @@
     </footer>
 
 
-  </div>
-
-  <div class = "description-container">
-    <!--<p>
-      The site takes the input of the user and makes an HTTP Get request to
-      Datamuse's API. I divide the input into an String Array seperated by
-      non-characters using regex. Using the array I iterate through the each word
-      and make the respective query to the API and display the result in the
-      Response Field. I aim to use promises to preserve the order as some words
-      return faster then others.
-    </p> <!-- How it works -->
   </div>
 
   <script src="js/main.js"> </script>
