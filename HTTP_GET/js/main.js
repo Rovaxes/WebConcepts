@@ -14,7 +14,7 @@ window.onload = () => {
   console.log("LOADED");
 }
 
-function getAllSuggestions(){
+async function getAllSuggestions(){
   const inputFieldArray = inputField.value.split(/[^\(\[a-z\]\[A-Z\]\)]/); //Splits the string into an array of words
   //const inputFieldArray = inputField.value.split(" ");
   console.log(inputFieldArray);
@@ -22,11 +22,27 @@ function getAllSuggestions(){
   const filteredInputArray = inputFieldArray.filter((value, index, array) => { return value.length > 0});
   console.log(filteredInputArray);
 
-  filteredInputArray.forEach(getSuggestions)
+  var outputArr = [];
+
+  for(var i = 0; i < filteredInputArray.length; i++){
+    var output = await getSuggestions(filteredInputArray[i]);
+    console.log(output);
+    outputArr.push(output);
+  }
+
+  console.log("output" + outputArr);
+
+  for(var i = 0; i < outputArr.length; i++){
+    responseField.innerHTML += outputArr[i];
+  }
+
 }
 
 
+
+
 function getSuggestions(word){
+  return new Promise((resolve, reject) => {
   console.log(word);
     var endpoint = url + queryParamsRhy + word;
     console.log(endpoint);
@@ -37,12 +53,13 @@ function getSuggestions(word){
     xhr.onreadystatechange = () => {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         //Do some rendering...
-        renderResponse(word, xhr.response);
+        resolve(render(word, xhr.response));
       }
     }
 
     xhr.open('GET', endpoint);
     xhr.send();
+  })
 }
 
 
