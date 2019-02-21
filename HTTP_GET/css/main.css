@@ -67,7 +67,7 @@ footer {
   background-image: linear-gradient(to right, rgba(2, 167, 231, 0.2), rgba(0, 178, 166, 1), rgba(240, 185, 214, 1), rgba(247, 199, 176, 0.2));
   color: white;
   border-radius: 4px;
-
+  margin: 2em;
   text-align: center;
 }
 
