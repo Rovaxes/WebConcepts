@@ -3,24 +3,26 @@
 *{
   font-family: 'Montserrat';
   padding: 0;
-  margin: 9;
+  margin: 0;
+  animation-name:fade-in;
+  animation-duration: 1.5s;
 }
 
 .header-grid {
-  margin: 2vh;
-  margin-bottom: 4vh;
-  min-height: 4vh;
+  padding: 2.5%;
+  -min-height: 4vh;
   display: grid;
   list-style: none;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-flow: column;
   align-content: center;
   justify-content: center;
+  -background-color: blue;
 }
 
 .header-grid li {
   text-transform: uppercase;
-  font-size: 3vw;
+  font-size: 2vw;
   justify-self: center;
   align-self: center;
 }
@@ -28,34 +30,125 @@
 
 a {
   text-decoration: none;
-    color: grey;
+  color: grey;
 }
 
 
 img {
-  width: 80%;
+  width: 75%;
   height: auto;
   display:block;
   margin:auto;
 }
 
 #showCase {
-  margin-top: 1vh;
-  background-size: cover;
-  -background-color: grey;
 }
 
 .container{
   width: 100%;
   height: 100%;
-  -background-color: blue;
+  position: relative;
 }
 
 #profession {
   margin: 4vh;
   color: grey;
-  font-size: 3vw;
+  font-size: 2vw;
   text-transform: uppercase;
   text-align: center;
   -background: blue;
+}
+
+.vertical-line-1{
+  width: 50%;
+  height: 20%;
+  background: blue;
+  bottom: 10%;
+  opacity: 0.1;
+  position:absolute;
+  z-index: 20;
+  animation-name:left-right-blue;
+  animation-duration: 1s;
+}
+
+.vertical-line-5{
+  width: 12.5%;
+  height: 20%;
+  background: blue;
+  bottom: 10%;
+  opacity: 0.6;
+  position:absolute;
+  z-index: 20;
+  animation-name:left-right-blue-2;
+  animation-duration: 0.1s;
+}
+
+.vertical-line-3{
+  width: 10%;
+  height: 4%;
+  background: black;
+  left: 80%;
+  bottom: 1%;
+  position:absolute;
+  z-index: 20;
+  animation-name:left-right-black-2;
+  animation-duration: 1s;
+}
+
+.vertical-line-2{
+  width: 2%;
+  height: 100%;
+  background: blue;
+  left: 98%;
+  bottom: 70%;
+  opacity: 0.6;
+  position:absolute;
+  z-index: 20;
+  animation-name:top-down-blue;
+  animation-duration: 1s;
+}
+
+.vertical-line-4{
+  width: 1%;
+  height: 100%;
+  background: black;
+  left: 96.5%;
+  bottom: 100%;
+  animation-name:top-down-black;
+  animation-duration: 1s;
+  position:absolute;
+  z-index: 20;
+}
+
+#projects {
+}
+
+@keyframes top-down-blue {
+  0%   {bottom:120%}
+  100% {bottom:70%}
+}
+
+@keyframes left-right-blue {
+  0%   {width:0%}
+  100% {width:50%}
+}
+
+@keyframes left-right-blue-2 {
+  0%   {width:0%}
+  100% {width:12.5%}
+}
+
+@keyframes top-down-black {
+  0%   {bottom:150%}
+  100% {bottom:100%}
+}
+
+@keyframes left-right-black-2 {
+  0%   {width:0%}
+  100% {width:10%}
+}
+
+@keyframes fade-in {
+  0%   {opacity: 0}
+  100% {opacity: 100}
 }
