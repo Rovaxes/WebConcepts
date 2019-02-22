@@ -9,7 +9,8 @@
 }
 
 .header-grid {
-  padding: 2.5%;
+  padding: 3%;
+  padding-bottom: 3.5%;
   -min-height: 4vh;
   display: grid;
   list-style: none;
@@ -34,7 +35,7 @@ a {
 }
 
 
-img {
+.mainImg {
   width: 75%;
   height: auto;
   display:block;
@@ -48,6 +49,7 @@ img {
   width: 100%;
   height: 100%;
   position: relative;
+  margin:auto;
 }
 
 #profession {
@@ -121,7 +123,98 @@ img {
 }
 
 #projects {
+  -height: 100vh;
+  -width:100%;
 }
+
+.projectImage{
+  -background:blue;
+  width: 80%;
+  -background-color: green;
+  align-self: center;
+  justify-self:center;
+  padding: 2vh;
+  margin: 2vh;
+  border: black solid 0.5vh;
+}
+
+.container-2 {
+  margin: 4vh auto 4vh auto;
+  width: 80%;
+  display: grid;
+  grid-gap: 2vh;
+  grid-auto-rows: 1fr auto;
+  -background-color: red;
+}
+
+@media (min-width: 700px){
+  .p-grid {
+      display: grid;
+      grid-auto-columns: 1fr 1fr auto;
+      grid-auto-flow: column;
+      -background-color: blue;
+  }
+}
+
+@media (max-width: 699px){
+  .p-grid {
+      display: grid;
+      grid-auto-rows: 1fr auto;
+      grid-auto-flow: row;
+      -background-color: blue;
+  }
+}
+
+.divide-line {
+  margin: auto;
+  margin-top:1vh;
+  margin-bottom: 1vh;
+  width: 90%;
+  height: 1vh;
+  background: black;
+}
+
+.divide-line-2 {
+  margin: auto;
+  margin-top:1vh;
+  margin-bottom: 1vh;
+  width: 75%;
+  height: 1vh;
+  background: blue;
+  opacity: 0.6;
+}
+
+#proj-title{
+  text-align: center;
+  font-size: 2vw;
+  margin: 2vh;
+  text-transform: uppercase;
+  color: grey;
+}
+
+.p-description{
+  align-self: center;
+  justify-self:center;
+  font-size: 2vh;
+  padding: 1em;
+  text-align: center;
+}
+
+.pd-container {
+  -background:blue;
+  width:100%;
+  justify-content: center;
+  align-self: center;
+}
+
+.p-title {
+  font-size: 2vw;
+  text-align: center;
+  color: grey;
+}
+
+
+
 
 @keyframes top-down-blue {
   0%   {bottom:120%}
