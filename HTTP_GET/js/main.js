@@ -16,7 +16,7 @@ window.onload = () => {
 
 async function getAllSuggestions(){
   const inputFieldArray = inputField.value.split(/[^\(\[a-z\]\[A-Z\]\)]/); //Splits the string into an array of words
-  //const inputFieldArray = inputField.value.split(" ");
+  
   console.log(inputFieldArray);
 
   const filteredInputArray = inputFieldArray.filter((value, index, array) => { return value.length > 0});

@@ -13,7 +13,6 @@ h1 {
 .app {
   background: url('../assets/art-materials.jpg') no-repeat bottom;
   background-size: cover;
-  background-color: blue;
   -padding: 1vh;
   height: 100vh;
 }
