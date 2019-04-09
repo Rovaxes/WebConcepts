@@ -1,0 +1,61 @@
+header {
+  padding: 20px;
+  -border: solid 1px black;
+}
+
+.navLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.tabs li {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.dropdown {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .navLayout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  .tabs {
+    display: none;
+    -background: red;
+  }
+
+  .dropdown {
+    display: block;
+    margin: auto;
+    padding: auto;
+  }
+
+  .tabs li {
+    list-style: none;
+    text-transform: uppercase;
+  }
+}
