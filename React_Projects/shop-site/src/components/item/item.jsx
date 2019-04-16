@@ -8,7 +8,7 @@ class Item extends Component {
 
   render() {
     return (
-      <button className="container">
+      <button className="item-container">
         <div className="hover-elements">
           <h3 className="name">{this.state.itemName}</h3>
           <button onClick={this.handleDetails} className="item-button">

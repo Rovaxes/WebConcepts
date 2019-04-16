@@ -1,9 +1,4 @@
-* {
-  color: white;
-  overflow: hidden;
-}
-
-.container {
+.item-container {
   background-color: snow;
   border: 2px solid grey;
   width: 200px;
@@ -12,18 +7,23 @@
   text-align: center;
 }
 
-.container > * {
+.item-container * {
+  color: white;
+  overflow: hidden;
+}
+
+.item-container > * {
   opacity: 0;
   transition: opacity 0.1s linear;
 }
 
-.container:hover > *,
-.container:focus * {
+.item-container:hover > *,
+.item-container:focus * {
   opacity: 1;
   transition: opacity 0.1s linear;
 }
 
-.hover-elements {
+.item-container .hover-elements {
   display: grid;
   height: inherit;
   width: inherit;
@@ -32,7 +32,7 @@
   justify-content: center;
 }
 
-.item-button {
+.item-container .item-button {
   width: 7em;
   justify-self: center;
   margin-top: 1em;
@@ -41,7 +41,7 @@
   border-radius: 10px;
 }
 
-.item-button:hover {
+.item-container .item-button:hover {
   background-color: white;
   color: black;
   transition: background-color 0.25s linear;
