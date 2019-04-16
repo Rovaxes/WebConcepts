@@ -19,7 +19,7 @@ h2 {
 .tabs {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: center;
+  justify-items: right;
   align-items: center;
 }
 
@@ -45,7 +45,6 @@ h2 {
 
   .tabs {
     display: none;
-    -background: red;
   }
 
   .dropdown {
