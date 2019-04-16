@@ -1,16 +1,48 @@
+* {
+  color: white;
+  overflow: hidden;
+}
+
 .container {
   background-color: snow;
   border: 2px solid grey;
   width: 200px;
   height: 260px;
-  line-height: 600%;
-  font-size: 0;
   vertical-align: middle;
   text-align: center;
-  transition: all 200ms ease;
 }
 
-.container:hover {
-  font-size: 1em;
-  box-shadow: 0 0 6px rgba(35, 173, 255, 1);
+.container > * {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.container:hover > *,
+.container:focus * {
+  opacity: 1;
+  transition: opacity 0.1s linear;
+}
+
+.hover-elements {
+  display: grid;
+  height: inherit;
+  width: inherit;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-content: center;
+  justify-content: center;
+}
+
+.item-button {
+  width: 7em;
+  justify-self: center;
+  margin-top: 1em;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+.item-button:hover {
+  background-color: white;
+  color: black;
+  transition: background-color 0.25s linear;
 }

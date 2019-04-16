@@ -10,11 +10,11 @@ class Counter extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div>
         <span> {this.formatCount()} </span>
         <button onClick={this.handleIncrement}> Increment </button>
         <button onClick={this.handleDecrement}> Decrement </button>
-      </React.Fragment>
+      </div>
     );
   }
 
