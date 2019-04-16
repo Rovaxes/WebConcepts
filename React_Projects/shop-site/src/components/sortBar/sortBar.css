@@ -1,0 +1,16 @@
+.sort-bar-container {
+  width: 100%;
+  background-color: black;
+  margin: 1em 0 3em 0;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.sort-bar-grid {
+  display: grid;
+  template: col;
+}
+
+input {
+  width: 20%;
+  justify-self: right;
+}
