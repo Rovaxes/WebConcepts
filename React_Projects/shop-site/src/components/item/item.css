@@ -1,0 +1,16 @@
+.container {
+  background-color: snow;
+  border: 2px solid grey;
+  width: 200px;
+  height: 260px;
+  line-height: 600%;
+  font-size: 0;
+  vertical-align: middle;
+  text-align: center;
+  transition: all 200ms ease;
+}
+
+.container:hover {
+  font-size: 1em;
+  box-shadow: 0 0 6px rgba(35, 173, 255, 1);
+}
