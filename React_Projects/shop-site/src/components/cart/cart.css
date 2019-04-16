@@ -1,0 +1,18 @@
+.cart-container {
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.hidden-display {
+  background: none;
+  padding: 0.5em;
+}
+
+@media screen and (max-width: 800px) {
+  .cart-container {
+    border: pink 2px solid;
+  }
+}
