@@ -3,12 +3,13 @@ import "./item.css";
 
 class Item extends Component {
   state = {
-    itemName: "Namebrand Crewneck"
+    itemName: "Namebrand Crewneck",
+    itemCount: 0
   };
 
   render() {
     return (
-      <button className="item-container">
+      <div className="item-container">
         <div className="hover-elements">
           <h3 className="name">{this.state.itemName}</h3>
           <button onClick={this.handleDetails} className="item-button">
@@ -18,16 +19,16 @@ class Item extends Component {
             Add to Cart
           </button>
         </div>
-      </button>
+      </div>
     );
   }
 
   handleDetails = () => {
-    console.log("details");
+    this.props.onDetails();
   };
 
   handleAddToCart = () => {
-    console.log("addToCart");
+    this.props.onAddToCart(this.props.item);
   };
 }
 
