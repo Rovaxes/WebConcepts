@@ -7,8 +7,24 @@
 }
 
 .hidden-display {
-  background: none;
+  background: white;
   padding: 0.5em;
+}
+
+.visible-display {
+  border: solid black 5px;
+  display: inline-block;
+  position: fixed;
+  top: 4%;
+  left: 4%;
+  height: 92%;
+  width: 92%;
+  background-color: white;
+}
+
+.cart-content {
+  width: 90%;
+  margin: 3% auto 2% auto;
 }
 
 @media screen and (max-width: 800px) {
