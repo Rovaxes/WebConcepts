@@ -12,6 +12,16 @@ export default class LinkedList {
   getHead() {
     return this.head;
   }
+
+  removeNode(data) {
+    var current = this.head;
+    while (current !== null) {}
+    if (current.next.data === data) {
+      current.next = current.next.next;
+    } else {
+      current = current.next;
+    }
+  }
 }
 
 class Node {
