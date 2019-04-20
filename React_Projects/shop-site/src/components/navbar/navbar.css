@@ -8,14 +8,6 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
-h1 {
-  font-weight: bold;
-}
-
-h2 {
-  font-weight: normal;
-}
-
 .tabs {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
