@@ -5,11 +5,15 @@ class Cart extends Component {
   render() {
     return (
       <div className="cart-container">
-        <button className="hidden-display">
+        <button onClick={this.toggleDisplay()} className="hidden-display">
           Shopping Cart {this.props.numOfItems}
         </button>
       </div>
     );
+  }
+
+  toggleDisplay() {
+    console.log("Hi");
   }
 }
 
