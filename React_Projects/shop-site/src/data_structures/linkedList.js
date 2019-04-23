@@ -22,6 +22,21 @@ export default class LinkedList {
       current = current.next;
     }
   }
+
+  size() {
+    var current = this.head;
+    var count;
+    if (current === null) {
+      count = 0;
+    } else {
+      count = 1;
+    }
+    while (current !== null && current.next !== null) {
+      count++;
+      current = current.next;
+    }
+    return count;
+  }
 }
 
 class Node {
