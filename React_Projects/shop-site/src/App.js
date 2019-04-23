@@ -37,7 +37,7 @@ class App extends Component {
           onDetails={this.handleDetails}
           onAddToCart={this.handleAddToCart}
         />
-        <Cart numOfItems={this.state.numOfItems} />
+        <Cart cartList={this.state.cartList} />
       </React.Fragment>
     );
   }
@@ -48,6 +48,7 @@ class App extends Component {
 
   handleAddToCart = item => {
     this.state.cartList.addToStart(item.id);
+    console.log(this.state.cartList.size());
     console.log(this.state.cartList);
     this.handleTotalItems();
   };
