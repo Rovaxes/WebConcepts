@@ -1,3 +1,5 @@
+import React, { Component } from "react";
+
 export default class LinkedList {
   constructor() {
     this.head = null;
@@ -36,6 +38,16 @@ export default class LinkedList {
       current = current.next;
     }
     return count;
+  }
+
+  displayList() {
+    var current = this.head;
+    const items = [];
+    while (current !== null) {
+      items.push(<li key={current.data}> {current.data} </li>);
+      current = current.next;
+    }
+    return <div>{items}</div>;
   }
 }
 
