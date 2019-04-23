@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./cart.css";
+import LinkedList from "../../data_structures/linkedList";
 
 class Cart extends Component {
   state = {
@@ -11,7 +12,7 @@ class Cart extends Component {
         {this.Display()}
         <div className="cart-container">
           <button onClick={this.toggleDisplay} className="hidden-display">
-            Shopping Cart
+            Shopping Cart {this.props.cartList.size()}
           </button>
         </div>
       </div>
