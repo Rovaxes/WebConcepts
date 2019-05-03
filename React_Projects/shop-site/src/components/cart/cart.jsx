@@ -29,7 +29,7 @@ class Cart extends Component {
       <div className="visible-display">
         <div className="cart-content">
           <h2>Shopping Cart</h2>
-          {this.props.cartList.displayList()}
+          <div className="item-list">{this.props.cartList.displayList()}</div>
         </div>
       </div>
     );

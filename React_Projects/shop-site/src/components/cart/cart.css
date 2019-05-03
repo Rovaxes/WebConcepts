@@ -20,11 +20,22 @@
   height: 92%;
   width: 92%;
   background-color: white;
+  -overflow: scroll;
 }
 
 .cart-content {
   width: 90%;
   margin: 3% auto 2% auto;
+  list-style: none;
+  height: 70%;
+}
+
+.item-list {
+  margin: 2em 0 2em 0;
+  height: 100%;
+  -display: grid;
+  overflow-y: scroll;
+  border: solid black 2px;
 }
 
 @media screen and (max-width: 800px) {
