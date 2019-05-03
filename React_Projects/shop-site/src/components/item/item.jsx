@@ -3,7 +3,7 @@ import "./item.css";
 
 class Item extends Component {
   state = {
-    itemName: "Namebrand Crewneck",
+    itemName: "Namebrand",
     itemCount: 0
   };
 

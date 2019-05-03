@@ -47,7 +47,7 @@ export default class LinkedList {
       items.push(<li key={current.data}> {current.data} </li>);
       current = current.next;
     }
-    return <div>{items}</div>;
+    return items;
   }
 }
 
